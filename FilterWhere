@@ -1,0 +1,4 @@
+df.filter(col("Item_Fat_Content") == 'Regular').display()
+
+
+df.select(col("Item_MRP").alias("Item_Type"))
