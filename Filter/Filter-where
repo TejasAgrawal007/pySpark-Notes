@@ -1,3 +1,0 @@
-df.filter(col("Item_Fat_Content") == 'Regular').display()
-
-df.filter((col("Item_MRP") == 'Soft Drinks') & (col("Item_Weight") < 10 )  ).display()
