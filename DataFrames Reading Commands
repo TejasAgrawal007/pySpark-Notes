@@ -1,0 +1,11 @@
+df = spark.read.format('csv').option('inferSchema', True).option('header', True).load('/FileStore/tables/BigMart_Sales-3.csv')
+
+df.display();
+
+
+df_json = spark.read.format('json').option('inferSchema', True)\
+    .option('header', True)\
+    .option('multiLine', False)\
+    .load('/FileStore/tables/drivers.json')
+
+df_json.display()
