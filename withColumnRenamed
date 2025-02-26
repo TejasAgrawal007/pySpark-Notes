@@ -1,1 +1,2 @@
 
+df.withColumnRenamed("Item_Weight", "Item_Wt").display()
