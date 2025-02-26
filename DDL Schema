@@ -1,0 +1,26 @@
+my_DDL_Schema = ''' 
+                    Item_Identifier string ,
+                    Item_Weight string ,
+                    Item_Fat_Content string ,
+                    Item_Visibility double ,
+                    Item_Type string ,
+                    Item_MRP double ,
+                    Outlet_Identifier string ,
+                    Outlet_Establishment_Year integer ,
+                    Outlet_Size string ,
+                    Outlet_Location_Type string ,
+                    Outlet_Type string ,
+                    Item_Outlet_Sales double 
+                     '''
+
+
+df = spark.read.format('csv')\
+    .schema(my_DDL_Schema)\
+    .option('header', True)\
+    .load("/FileStore/tables/BigMart_Sales-3.csv")
+
+
+df.display()
+
+
+df.printSchema()
