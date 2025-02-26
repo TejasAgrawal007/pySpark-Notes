@@ -2,3 +2,6 @@ df.filter(col("Item_Fat_Content") == 'Regular').display()
 
 
 df.select(col("Item_MRP").alias("Item_Type"))
+
+
+df.filter((col("Outlet_Location_Type").isNull())  & (col("Outlet_Type").isin('Tier 1', 'Tier 2'))).display()
