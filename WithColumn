@@ -2,3 +2,7 @@ df = df.withColumn('flag', lit('new'))
 df.display()
 
 df.withColumn('multiply', col("Item_Weight") * col("Item_Visibility")).display()
+
+
+df.withColumn("Item_Fat_Content", regexp_replace(col("Item_Fat_Content"),"Regular", "reg")) \
+    .withColumn("Item_Fat_Content", regexp_replace(col("Item_Fat_Content"),"Low Fat", "Lf")).display()
