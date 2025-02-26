@@ -1,0 +1,4 @@
+df = df.withColumn('flag', lit('new'))
+df.display()
+
+df.withColumn('multiply', col("Item_Weight") * col("Item_Visibility")).display()
