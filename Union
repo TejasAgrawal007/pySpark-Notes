@@ -1,0 +1,9 @@
+data1 = [('1', 'Tejas'), ('2', "Karishna")]
+schema1 = 'id STRING, name STRING'
+
+df1 = spark.createDataFrame(data1, schema1)
+
+data2 = [('3', 'Dipti'), ('4', 'Khushi')]
+schema2 = 'id STRING, name STRING'
+
+df2 = spark.createDataFrame(data2, schema2)
