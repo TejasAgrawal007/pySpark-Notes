@@ -2,3 +2,6 @@
 df = df.withColumn('CurrentDate', current_date())
 df.display()
 
+#2. Date Add
+df = df.withColumn('WeekAfter', date_add("CurrentDate", 7))
+df.display()
