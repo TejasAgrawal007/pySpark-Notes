@@ -1,3 +1,10 @@
 df.drop(col("Item_Visibility"),col("Item_Outlet_Sales")).display()
 
 df.drop("Item_Visibility").display()
+
+
+
+// Drop Duplicates
+
+df.drop_duplicates().display()
+
