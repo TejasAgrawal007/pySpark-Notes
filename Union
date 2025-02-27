@@ -7,3 +7,9 @@ data2 = [('3', 'Dipti'), ('4', 'Khushi')]
 schema2 = 'id STRING, name STRING'
 
 df2 = spark.createDataFrame(data2, schema2)
+
+
+
+// How do I Add a Two tables
+
+df1.union(df2).display()
