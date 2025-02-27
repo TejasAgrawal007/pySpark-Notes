@@ -1,0 +1,1 @@
+df = df.withColumn("Item_Weight", col("Item_Weight").cast(StringType()))
