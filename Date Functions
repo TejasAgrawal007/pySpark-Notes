@@ -1,0 +1,4 @@
+# 1. Create a column for Curret Date
+df = df.withColumn('CurrentDate', current_date())
+df.display()
+
