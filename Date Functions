@@ -5,3 +5,9 @@ df.display()
 #2. Date Add
 df = df.withColumn('WeekAfter', date_add("CurrentDate", 7))
 df.display()
+
+3. Date Sub
+df.withColumn("WeekBefore", date_sub("CurrentDate", 7)).display()
+
+4. Same Things...
+df = df.withColumn('WeekAfter', date_add("CurrentDate", -7))
