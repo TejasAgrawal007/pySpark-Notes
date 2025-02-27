@@ -1,3 +1,4 @@
 df.sort(desc("Item_Weight")).display()
 
 df.sort(["Item_Weight", "Item_Visibility"], ascending = [0,0]).display()
+df.sort(["Item_Weight", "Item_Visibility"], ascending = [0,1]).display()
