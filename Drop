@@ -3,6 +3,10 @@ df.drop(col("Item_Visibility"),col("Item_Outlet_Sales")).display()
 df.drop("Item_Visibility").display()
 
 
+// How to Delete All the Null values in a Tables
+
+df.dropna().display()
+
 
 // Drop Duplicates
 
