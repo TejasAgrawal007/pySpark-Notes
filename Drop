@@ -7,6 +7,8 @@ df.drop("Item_Visibility").display()
 
 df.dropna().display()
 
+df.dropDuplicates(subset=["Item_Weight"]).display()
+
 
 // Drop Duplicates
 
