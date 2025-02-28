@@ -7,3 +7,6 @@ df.withColumn('rowNum', row_number().over(Window.orderBy("Item_Identifier"))).di
 
 # 2. Rank - It will Provide a Ranking
 df.withColumn('rank', rank().over(Window.orderBy("Item_Identifier"))).display()
+
+# 3. If I want to print the data in desc order
+df.withColumn('rank', rank().over(Window.orderBy(col("Item_Identifier").desc()))).display()
