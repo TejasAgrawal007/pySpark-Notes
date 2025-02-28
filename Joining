@@ -26,3 +26,6 @@ df1.join(df2, df1["dept_id"] == df2["dept_id"], "inner").display()
 
 # 2. Left Join
 df1.join(df2, df1["dept_id"] == df2["dept_id"], 'left').display()
+
+# 3. Right Join
+df1.join(df2, df1["dept_id"] == df2["dept_id"], 'right').display()
