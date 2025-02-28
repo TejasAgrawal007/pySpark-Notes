@@ -5,3 +5,5 @@ from pyspark.sql.window import Window
 df.withColumn('rowNum', row_number().over(Window.orderBy("Item_Identifier"))).display()
 
 
+# 2. Rank - It will Provide a Ranking
+df.withColumn('rank', rank().over(Window.orderBy("Item_Identifier"))).display()
