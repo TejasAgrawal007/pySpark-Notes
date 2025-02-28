@@ -14,3 +14,6 @@ df.withColumn('rank', rank().over(Window.orderBy(col("Item_Identifier").desc()))
 # 4. Rank VS DENSE Rank
 df.withColumn('rank', rank().over(Window.orderBy(col("Item_Identifier").desc())))\
     .withColumn("denseRank", dense_rank().over(Window.orderBy(col("Item_Identifier").desc()))).display()
+
+# 5.Cumulative Sum
+df.withColumn('cumSum', sum("Item_MRP").over(Window.orderBy("Item_Type").rowsBetween(Window.unboundedPreceding, Window.currentRow))).display()
