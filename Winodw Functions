@@ -3,3 +3,5 @@ from pyspark.sql.window import Window
 
 # 1. Add a unique column of a unique number
 df.withColumn('rowNum', row_number().over(Window.orderBy("Item_Identifier"))).display()
+
+
