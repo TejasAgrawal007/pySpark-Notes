@@ -1,0 +1,11 @@
+dataj1 = [
+    (1, "Alice", 'd01'),
+    (2, "Bob", 'd02'),
+    (3, "Charlie",'d03'),
+    (4, "David",'d04'),
+    (5, "Eve",'d05')
+]
+
+schemaj1 = 'emp_id String, emp_name String, dept_id String'
+
+dfj1= spark.createDataFrame(dataj1,schemaj1)
