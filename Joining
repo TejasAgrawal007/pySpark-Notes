@@ -9,3 +9,7 @@ dataj1 = [
 schemaj1 = 'emp_id String, emp_name String, dept_id String'
 
 dfj1= spark.createDataFrame(dataj1,schemaj1)
+
+
+# 1. inner Join
+df1.join(df2, df1["dept_id"] == df2["dept_id"], "inner").display()
