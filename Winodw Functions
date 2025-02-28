@@ -10,3 +10,7 @@ df.withColumn('rank', rank().over(Window.orderBy("Item_Identifier"))).display()
 
 # 3. If I want to print the data in desc order
 df.withColumn('rank', rank().over(Window.orderBy(col("Item_Identifier").desc()))).display()
+
+# 4. Rank VS DENSE Rank
+df.withColumn('rank', rank().over(Window.orderBy(col("Item_Identifier").desc())))\
+    .withColumn("denseRank", dense_rank().over(Window.orderBy(col("Item_Identifier").desc()))).display()
