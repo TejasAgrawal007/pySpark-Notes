@@ -3,13 +3,23 @@ dataj1 = [
     (2, "Bob", 'd02'),
     (3, "Charlie",'d03'),
     (4, "David",'d04'),
-    (5, "Eve",'d05')
+    (5, "Eve",'d05'),
+    (6, "Tejas",'d0')
 ]
 
 schemaj1 = 'emp_id String, emp_name String, dept_id String'
 
-dfj1= spark.createDataFrame(dataj1,schemaj1)
+df1= spark.createDataFrame(dataj1,schemaj1)
 
+
+dataj2 = [('d01','HR'),
+          ('d02','Marketing'),
+          ('d03','Account'),
+          ('d04','IT'),
+          ('d05','Finance')]
+
+schemaj2 = 'dept_id STRING, department STRING'
+df2 = spark.createDataFrame(dataj2,schemaj2) 
 
 # 1. inner Join
 df1.join(df2, df1["dept_id"] == df2["dept_id"], "inner").display()
